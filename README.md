@@ -4,6 +4,9 @@ plain text version to be used as an exercise. The plain text version is intended
 to be used as a medium for editing as practice while learning Vim commands.  
 If any updated versions are made, they will be available here:  
 https://docs.google.com/document/d/1L7QYH064DyPgZfNngh6p9lDYkaLs3ADrABNN5WlYUPY/edit
+  
+The .vimrc that I use is constantly updated and available here:  
+https://github.com/JasonMayberry/bash-shell/blob/master/.vimrc
 
 ### Quitting  
    **ZZ** `-exit, saving changes`  
