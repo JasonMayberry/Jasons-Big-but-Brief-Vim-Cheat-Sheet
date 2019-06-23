@@ -1,5 +1,8 @@
 # Jason's Big but Brief -> Vim Cheat Sheet  
-    
+This repository contains a .pdf version of the cheat sheet for a reference and a  
+plain text version to be used as an exercise. The plain text version is intended  
+to be used as a medium for editing as practice while learning Vim commands.
+
 ### Quitting  
    **ZZ** `-exit, saving changes`  
    **:w** `-write/save changes`  
