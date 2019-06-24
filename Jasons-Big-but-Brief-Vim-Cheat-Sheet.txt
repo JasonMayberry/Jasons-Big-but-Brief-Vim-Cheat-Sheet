@@ -58,6 +58,14 @@ Split Window
    ctrl-w 2 + -rise window height
    ctrl-w 2 < -narrow window width
    ctrl-w 2 > -widen window width
+  Moving Split Windows:
+   ctrl+w R -rotate windows up/left
+   ctrl+w r -rotate windows down/right
+   ctrl+w L -Move current window right
+   ctrl+w H -Move current window left
+   ctrl+w J -Move current window down
+   ctrl+w K -Move current window to top
+   :help window-moving -to learn more
 
 Settings
    :set nu -numbered lines
