@@ -62,8 +62,8 @@ https://github.com/JasonMayberry/bash-shell/blob/master/.vimrc
    **ctrl-w 2 -** `-drop window height`  
    **ctrl-w 2 +** `-rise window height`  
    **ctrl-w 2 <** `-narrow window width`  
-   **ctrl-w 2 >** `-widen window width` 
-  *Moving Split Windows:*
+   **ctrl-w 2 >** `-widen window width`  
+  *Moving Split Windows:*  
    **ctrl+w R** `-rotate windows up/left`  
    **ctrl+w r** `-rotate windows down/right`  
    **ctrl+w L** `-Move current window right`  
