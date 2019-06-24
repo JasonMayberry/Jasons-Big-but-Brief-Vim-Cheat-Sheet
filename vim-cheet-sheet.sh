@@ -22,8 +22,35 @@ NC='\033[0m' # No Color
 # For the headings:
 # :%s/\#\# \(.\{-}\)$/printf \"${Heading} \1 ${NC} \\n\" #main headings/g
 # For the commands:
-# :%s/^\s\+\*\*\(.\{-}\)\*\* \`\(.\{-}\)\`\+/printf \"${Command}   \1${Description} \2${NC}\\n\"/
+# :%s/^\s\+\*\*\(.\{-}\)\*\* \`\(.\{-}\)\`/printf \"${Command}   \1${Description} \2${NC}\\n\"/g
 # The echo command was used to avoid problems with % in a printf statement
+
+# HOW IT WORKS:
+# 
+# Existing string:
+#    **ZQ** `-exit, ignore changes`
+# 
+# Vim String Substitution Command:
+# :%s/^\s\+\*\*\(.\{-}\)\*\* \`\(.\{-}\)\`/printf \"${Command}   \1${Description} \2${NC}\\n\"/g
+# 
+# Modified String after running the Vim substitution:
+# printf "${Command}   ZQ${Description} -exit, ignore changes${NC}\n"
+# 
+# :                     command will follow
+# %                     matches all lines in the whole file
+# s/                    substitution string
+# ^                     the beginning of the line
+# \s                    one space, the first in this case
+# \+                    any number of the preceding character
+# \*\*                  literally match **
+# \( expresion \)       save whatever matches the inner expression to the register \1
+# .\{-}                 match any number of any kind of character
+# \*\* \`               literally match ** `
+# \( expresion \)       save whatever matches the inner expression to the register \2
+# \`                    literally match `
+# /replacement string/  Substitute every string that matches the above criteria with everything that is between the //
+# like this:            /printf \"${Command}   \1${Description} \2${NC}\\n\"/
+# g                     last but not least g is the global flag to do this to the whole file
 
 # Title . VIM .
 echo
