@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install vim-cheet-sheet.sh  
-# * add the two lines below too ~.bashrc file. It will add ~/bin folder to $PATH and vicheet as an alias.
+# * add the two lines below too ~/.bashrc file. It will add ~/bin folder to $PATH and vicheet as an alias.
 #     alias vicheet='vim-cheet-sheet.sh --color=always | less -r' 
 #     me@linuxBox:~$ export PATH="$HOME/bin:$PATH"  
 # 
