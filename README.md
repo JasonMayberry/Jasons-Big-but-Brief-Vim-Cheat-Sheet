@@ -8,7 +8,7 @@ https://docs.google.com/document/d/1L7QYH064DyPgZfNngh6p9lDYkaLs3ADrABNN5WlYUPY/
 The .vimrc that I use is constantly updated and available here:  
 https://github.com/JasonMayberry/bash-shell/blob/master/.vimrc
 
-### Quitting  
+## Quitting  
    **ZZ** `-exit, saving changes`  
    **:w** `-write/save changes`  
    **ZQ** `-exit, ignore changes`  
