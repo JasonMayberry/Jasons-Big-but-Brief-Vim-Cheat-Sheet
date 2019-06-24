@@ -18,8 +18,12 @@ Heading='\033[41m' # White on Red
 Title='\033[42m' # White on Green
 NC='\033[0m' # No Color
 
-# String append/replace substution used to convert markdown formating
+# VIM String append/replace substutions used to convert github markdown into bash.sh formatt
+# For the headings:
 # :%s/\#\# \(.\{-}\)$/printf \"${Heading} \1 ${NC} \\n\" #main headings/g
+# For the commands:
+# :%s/^\s\+\*\*\(.\{-}\)\*\* \`\(.\{-}\)\`\+/printf \"${Command}   \1${Description} \2${NC}\\n\"/
+# The echo command was used to avoid problems with % in a printf statement
 
 # Title . VIM .
 echo
