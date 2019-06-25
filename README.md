@@ -3,7 +3,7 @@ This repository contains a .pdf version of the cheat sheet for a reference and a
 plain text version to be used as an exercise. The plain text version is intended  
 to be used as a medium for editing as practice while learning Vim commands.  
 If any updated versions are made, they will be available here:  
-https://docs.google.com/document/d/1L7QYH064DyPgZfNngh6p9lDYkaLs3ADrABNN5WlYUPY/edit
+https://docs.google.com/document/d/1qjAihIw9Y4QFElzkkdOxEGXCBvvXHruHADh6OaWXF30/edit?usp=sharing
   
 The .vimrc that I use is constantly updated and available here:  
 https://github.com/JasonMayberry/bash-shell/blob/master/.vimrc
