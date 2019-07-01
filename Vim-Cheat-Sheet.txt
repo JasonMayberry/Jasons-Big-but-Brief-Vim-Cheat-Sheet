@@ -1,0 +1,537 @@
+﻿1 Vim Cheat Sheet
+  2 ---------------
+  3 
+  4 .Quitting
+  5   ZZ - exit, saving changes
+  6   ZQ - exit, ignore changes
+  7 
+  8 .Help
+  9   :help' or ':h - Keyword
+ 10   :viusage - A full Cheet Sheet
+ 11 
+ 12 .Files
+ 13   :w file - "Save" write to file
+ 14   :sav file2 - "Save As" & edit file2
+ 15   :w file.bak - save a backup copy
+ 16   :r file - read file in after line
+ 17   :Explore - open vim file explorer
+ 18   vim -O file1 file2 - open 2 files split
+ 19   vim -y - open in click and type mode
+ 20   vim file1 file2 - open 2 arg files
+ 21   :args - see list of open args
+ 22   :argadd t.txt - add to args list
+ 23   :argdelete t.txt - delete arg(s)
+ 24   :argedit t.txt - add to args list
+ 25   :fir - edit <-first args list file
+ 26   :la - edit last-> args list file
+ 27   :n - goto-> next file
+ 28   :1n - go one file <-right
+ 29   :N - goto <-previous file
+ 30   :1N - go one file <-left
+ 31   :e file.txt - open file in vim
+ 32 
+ 33 .File Tabs
+ 34   vim -p file1 file2 - open 2 tabs
+ 35   :Texplore - open file explorer tab
+ 36   :mksession work.vim - save session
+ 37   vim -S work.vim - open session
+ 38   :source work.vim - open session
+ 39   :mks! - save changes to session
+ 40   :tabe file.txt - open new tab
+ 41   :tabonly - close all but current
+ 42   :tabn - goto next tab file
+ 43   :tabp - goto previous tab file
+ 44   gt - goto next tab file (cycle)
+ 45   2gt - takes you to 2nd tab
+ 46 
+ 47 .Split Window
+ 48   :split file - split, load file
+ 49   :vsplit file - vertical split
+ 50   ctrl-w up - move up a window
+ 51   ctrl-w left - move left a window
+ 52   ctrl-w ctrl-w - cycle windows
+ 53   ctrl-w _ - maximize vertically
+ 54   ctrl-w | - maximize horizontally
+ 55   ctrl-w = - make all equal size
+ 56   :sview file - split readonly
+ 57   :close - close current window
+ 58   :Sexplore - split, open file explorer
+ 59   :Vexplore - vertical file explorer
+ 60   :Vexplore! - open f. explorer on right
+ 61  Resizing Split Windows:
+ 62   ctrl-w 2 - - drop window height
+ 63   ctrl-w 2 + - rise window height
+ 64   ctrl-w 2 < - narrow window width
+ 65   ctrl-w 2 > - widen window width
+ 66  Moving Split Windows:
+ 67   ctrl+w R - rotate windows up/left
+ 68   ctrl+w r - rotate windows down/right
+ 69   ctrl+w L - Move current window right
+ 70   ctrl+w H - Move current window left
+ 71   ctrl+w J - Move current window down
+ 72   ctrl+w K - Move current window to top
+ 73   :help window-moving - to learn more
+ 74 
+ 75 .Settings
+ 76   :set nu - numbered lines
+ 77   :set nonu - no numbered lines
+ 78   :set rnu - relative numbered lines
+ 79   :set nornu - no rel. numbered lines
+ 80   :colo morning - set colorscheme
+ 81   :syntax on - syntax highlighting on
+ 82   :set ruler - show current position
+ 83   :setlocal spell! - spell check on
+ 84   :setlocal nospell! - spell check off
+ 85   :set so=2 - top & bottom padding
+ 86   :set ignorecase - when searching
+ 87   :noh - unsets last search pattern
+ 88   :set magic - for regular expressions
+ 89   :set ai - auto indent
+ 90   :set si - smart indent
+ 91   :set wrap - wrap lines
+ 92   :set tabstop=4 - ␣ width of tab char
+ 93   :set softtabstop=0 - tabstop width
+ 94   :set expandtab - make tab key spaces
+ 95   :set noexpandtab - make tab key tabs
+ 96   :set shiftwidth=4 - width of indent
+ 97   :set smarttab - auto indent on
+ 98   :help smarttab - more details
+ 99 
+100 .Inserting text
+101   i - insert
+102   I - insert at line beginning
+103   a - append
+104   A - append end of line
+105   o - open on lower line
+106   O - open on Upper line
+107   s - substitute character
+108 
+109 .Insert Mode Shortcuts
+110   ctrl+w - delete word b4 cursor
+111   ctrl+u - delete line b4 cursor
+112   ctrl+n - autocomplete
+113 
+114 .Text Objects
+115   ca" - change all quotes & "quoted"
+116   ci" - change inside quotes"
+117   4cw - change 4 words
+118   caw - change all word
+119   cit - change inside HTML tag(s)
+120   diw - delete in word
+121   di" - delete text inside quotes"
+122   da" - delete all quotes & "quoted"
+123   df[[:space:]] - delete to space include space
+124   dt[[:space:]] - delete till space
+125   va" - vis. select all quotes & "quoted"
+126   vi" - vis. select text inside quotes"
+127   ya" - yank all quotes & "quoted"
+128   yi" - yank text inside quotes"
+129 
+130 .Navigation
+131           ^
+132           k
+133        <h   l>
+134           j
+135           v
+136   8j - move 8 lines down
+137   gj - down 1 wrapped line
+138   8gg - goto line 8
+139   :8 - goto line 8
+140   50% - goto middle of doc
+141   % - focus on the opposite brace
+142   gi - back to last insert
+143   H - high on the screen
+144   M - middle of the screen
+145   L - bottom of the screen
+146   zt - work on top of screen
+147   zz - Center workspace
+148   zb - work on bottom of screen
+149   ^ - first non-blank char
+150   g_ - last non-blank char
+151   ctrl+y & ctrl+e - scroll ONE line
+152   ctrl+u & ctrl+d - scroll HALF-page
+153   ctrl+b & ctrl+f - scroll FULL-page
+154   ctrl+O - Retrace moves backwards
+155   ctrl+I - Retrace moves forwards
+156   /pat - iterate all matching words
+157   iterate words same as current
+158      N - next one up
+159      n - next one down
+160   # - goto previous match of current
+161   G - goto to end of file
+162   fc - go forward to c
+163   Fc - go backward to c
+164   w - goto> next word
+165   W - goto> next word÷spaces
+166   e - goto> end of word
+167   E - goto> end of word÷spaces
+168   b - <goto beginning of word
+169   B - <goto begin of word÷spaces
+170   0 - goto beginning of line
+171   $ - goto end of line
+172   ma - sets local mark
+173   mA - sets global to path mark
+174   a - goto mark a
+175   :marks - list of all marks
+176 
+177 .Change
+178   cc - change entire line
+179   cw - change word
+180   cW - change all to next space
+181   C - change to the end of line
+182 
+183 .Delete
+184   :1,$d - delete all lines
+185        or :%d or ggdG
+186   x - delete> char to the right
+187   X - <delete char to the left
+188   D - delete to the end of line
+189   dd - delete current line
+190   "_d - black hole delete
+191   :d - delete current line
+192   dw - delete word
+193   dW - delete all to next space
+194   df? - delete> through first "?"
+195   dt? - delete> to first "?"
+196   dF? - <delete back through first "?"
+197   dT? - <delete back to first "?"
+198 
+199 .Replace
+200   r - replace char not insert
+201   R - replace chars not insert
+202   :s/pattern/string/flags
+203   g - flag, replace all occurrences
+204   c - flag, confirm replaces
+205 
+206 .Copy & Paste
+207   yy - yank/copy line
+208   5yy - yank 5 lines
+209   :12,16y - yank 5 lines
+210   :1,8t. - duplicate lines 1-8
+211   p - put/paste on lower line
+212   P - put/paste on Upper line
+213   20p - put same text twenty times
+214 
+215 .Visual Mode
+216   v - enter visual mode
+217   V - enter visual Line mode
+218   ctrl+v - enter vis. Block mode
+219   ggvG - visual select all
+220   y - yank/copy selected
+221   o - cursor to opposite end
+222   O - cursor to opposite side
+223   gv - restore previous selection
+224   1v - selects area = to the last
+225   r - replaces select with char
+226   R - del. select, starts i mode
+227   va" - vis. select all "quoted"
+228   vi" - vis. select inside quotes"
+229 
+230 Visual Block Routines
+231 __Replaces block by the same text__
+232  select block, press c, change 1st
+233  line, press <Esc> twice, replaces
+234  block by the same text in 1st line.
+235  This also works with C or I or A
+236 
+237 __Replaces block from clipboard__
+238  select what you want to put elsewhere,
+239  press d, select the code that you want
+240  it to replace, press p
+241 
+242 __Paste over multiple areas(selections)__
+243  select what you want to put elsewhere,
+244  press y, select each area that you want
+245  it to replace, press "_d, press P
+246  one area at a time
+247 
+248 .Format
+249   J - (Join) delete that line ending
+250   == - auto format indentation
+251   =i{ - indent inside {}
+252   gg=G - fix the indentation global
+253   :66,70s/^/# / - Commenting
+254   :66,70s/^#/ - Uncommenting
+255   :12,20> - Indent
+256   :12,20>>> - Indents 3 times
+257   5>> - Indents 5 lines
+258   5>>.. - Repeats 5>> twice
+259 
+260 .Special
+261   :h - Great help info!
+262   ctrl+] - goto tag when caret is over it
+263   ctrl+G - display cursor location
+264   :tag tagname - jump to the tag
+265   :%retab - replace all tabs with spaces
+266   xp - transpose two letters
+267   & - repeat last :s cmd
+268   :1,8t. - duplicate lines 1-8
+269   :1,8!nl - line 1-8 number a list
+270   :%!nl -ba - Insert line numbers
+271   sort - sort the whole doc
+272   22,33sort - sort line 22-33
+273   :'a,.sort - from marker a, to caret
+274   :%sort! - sort in reverse
+275   :%sort u - remove duplicate lines
+276   :sort n - do numeric sort
+277   :sort i - case is ignored
+278   :help sort - more options
+279   ~ - toggle case
+280   . - repeat last cmd
+281   :! - drop to external cmd
+282   !!ls - insert output of cmd
+283   == - duplicate operator
+284 
+285 .Code Folding
+286   zf - fold visible line selected
+287   2zfj - fold 3 lines down
+288   za - unfold last fold
+289   zR - unfold all
+290 
+291 .Undo
+292   u - undo last change
+293   U - undo all changes to line
+294 
+295 .Recording a macro
+296   qd - start recording to register d
+297   ... - your complex series of commands
+298   q - stop recording
+299   @d - execute your macro
+300   @@ - execute your macro again
+301 
+302 .String Substitution
+303   :help pattern-overview
+304   :help sub-replace-special
+305   :help sub-replace-expression
+306   :set noignorecase
+307    make searches case sensitive 
+308    (the default).
+309   :%s/foo/bar/g
+310    Find each occurrence of 'foo' 
+311    (in all lines), and 
+312    replace it with 'bar'.
+313   :s/foo/bar/g
+314    Find each occurrence of 'foo' 
+315    (in the current line only), 
+316    and replace it with 'bar'.
+317   :%s/foo/bar/gc
+318    Change each 'foo' to 'bar', 
+319    but ask for confirmation first.
+320   :%s/\<foo\>/bar/gc
+321    Change only whole words exactly
+322    matching 'foo' to 'bar'; 
+323    ask for confirmation.
+324   :%s/foo/bar/gci
+325    Change each 'foo' (case insensitive
+326    due to the i flag) to 'bar';
+327    ask for confirmation.
+328   :%s/foo\c/bar/gc
+329    is the same because \c makes the 
+330    search case insensitive. This may 
+331    be wanted after using 
+332    :set noignorecase to make searches 
+333    case sensitive (the default).
+334   :%s/foo/bar/gcI
+335    Change each 'foo' (case sensitive 
+336    due to the I flag) to 'bar';
+337    ask for confirmation.
+338   :%s/foo\C/bar/gc
+339    is the same because \C makes the 
+340    search case sensitive. This may 
+341    be wanted after using 
+342    :set ignorecase to make searches
+343    case insensitive.
+344 
+345 Use the c flag
+346 When you need to confirm for each match what to do.
+347 Vim will output something like: replace with foobar (y/n/a/q/l/^E/^Y)?
+348 y - yes substitute this match
+349 n - no skip this match
+350 a - substitute this and ("all" remaining matches)
+351 q - quit the command
+352 l - to substitute this match and quit (think of "last")
+353 ^E - scroll the screen up by holding the Ctrl key and pressing E
+354 ^Y - scroll the screen down by holding the Ctrl key and pressing Y.
+355 However, the last two choices are only available, if your Vim is a normal,
+356 big or huge build or the insert_expand feature was enabled at compile time
+357 (look for +insert_expand in the output of :version).
+358 
+359 .Search range:
+360 :s/foo/bar/g      Change each "foo" to "bar" in the current line.
+361 :%s/foo/bar/g     Change each "foo" to "bar" in all the lines.
+362 :5,12s/foo/bar/g  Change each "foo" to "bar" for all lines from line 5 to line 12 (inclusive).
+363 :'a,'bs/foo/bar/g Change each "foo" to "bar" for all lines from mark a to mark b inclusive.
+364 :'<,'>s/foo/bar/g When compiled with +visual, change each "foo" to "bar" for all lines within a visual selection.
+365                    Vim automatically appends the visual selection range ('<,'>) for any ex command when you select
+366                    an area and enter :.
+367 :.,$s/foo/bar/g     Change each "foo" to "bar" for all lines from the current line (.) to the last line ($) inclusive.
+368 :.,+2s/foo/bar/g    Change each "foo" to "bar" for the current line (.) and the two next lines (+2).
+369 :g/^baz/s/foo/bar/g Change each "foo" to "bar" in each line starting with "baz".
+370 
+371 .When searching:
+372 ., *, \, [, ^, and $ are metacharacters.
+373 +, ?, |, &, {, (, and ) must be escaped to use their special function.
+374 \/ is / (use backslash + forward slash to search for forward slash)
+375 \t is tab, \s is whitespace (space or tab)
+376 \n is newline, \r is CR (carriage return = Ctrl-M)
+377 After an opening [, everything until the next closing ] specifies a collection. (see :help collection)
+378 Character ranges can be represented with a -;
+379 for example a letter a, b, c, or the number 1 can be matched with [1a-c].
+380 Negate the collection with [^ instead of [;
+381 For example [^1a-c] matches any character except a, b, c, or 1.
+382 \{#\} is used for repetition.
+383 /foo.\{2\} will match foo and the two following characters.
+384 The \ is not required on the closing } so /foo.\{2} will do the same thing.
+385 \(foo\) makes a backreference to foo. Parenthesis without escapes are literally matched.
+386 Here the \ is required for the closing \).
+387 
+388 .When replacing:
+389 \r is newline, \n is a null byte (0x00).
+390 \& is ampersand (& is the text that matches the search pattern).
+391 \0 inserts the text matched by the entire pattern
+392 \1 inserts the text of the first backreference.
+393 \2 inserts the second backreference, and so on.
+394 
+395 You can use other delimiters with substitute:
+396 :s#http://www.example.com/index.html#http://example.com/#
+397 
+398 Save typing by using \zs and \ze to set the start and end of a pattern.
+399 For example, instead of:
+400 :s/Copyright 2007 All Rights Reserved/Copyright 2008 All Rights Reserved/
+401 Use:
+402 :s/Copyright \zs2007\ze All Rights Reserved/2008/
+403 
+404 .Using the current word or registersEdit
+405 :%s//bar/g
+406 Replace each match of the last search pattern with 'bar'.
+407 For example, you might first place the cursor on the word foo then press * to search for that word.
+408 The above substitute would then change all words exactly matching 'foo' to 'bar'.
+409 :%s/foo/<c-r><c-w>/g
+410 Replace each occurrence of 'foo' with the word under the cursor.
+411 <c-r><c-w> means that you press Ctrl-R then Ctrl-W.
+412 The word under the cursor will be inserted as though you typed it.
+413 :%s/foo/<c-r><c-a>/g
+414 Replace each occurrence of 'foo' with the WORD under the cursor (delimited by whitespace).
+415 <c-r><c-a> means that you press Ctrl-R then Ctrl-A.
+416 The WORD under the cursor will be inserted as though you typed it.
+417 :%s/foo/<c-r>a/g
+418 Replace each occurrence of 'foo' with the contents of register 'a'.
+419 <c-r>a means that you press Ctrl-R then a.
+420 The contents of register 'a' will be inserted as though you typed it.
+421 :%s/foo/<c-r>0/g
+422 Same as above, using register 0 which contains the text from the most recent yank command.
+423 Examples of yank (copy) commands are yi( which copies the text inside parentheses around the cursor,
+424 and y$ which copies the text from the cursor to the end of the line. After a yank command which did
+425 not specify a destination register, the copied text can be entered by pressing Ctrl-R then 0.
+426 :%s/foo/\=@a/g
+427 Replace each occurrence of 'foo' with the contents of register 'a'.
+428 \=@a is a reference to register 'a'.
+429 The contents of register 'a' is not shown in the command.
+430 This is useful if the register contains many lines of text.
+431 :%s//<c-r>//g
+432 Replace each match of the last search pattern with the / register (the last search pattern).
+433 After pressing Ctrl-R then / to insert the last search pattern 
+434 (and before pressing Enter to perform the command), you could edit the text to make any required change.
+435 :%s/<c-r>*/bar/g
+436 Replace all occurrences of the text in the system clipboard (in the * register) with 'bar' (see next example if multiline).
+437 On some systems, selecting text (in Vim or another application) is all that is required to place that text in the  * register.
+438 :%s/<c-r>a/bar/g
+439 Replace all occurrences of the text in register 'a' with 'bar'.
+440 <c-r>a means that you press Ctrl-R then a. The contents of register 'a' will be inserted as though you typed it.
+441 Any newlines in register 'a' are inserted as ^M and are not found.
+442 The search works if each ^M is manually replaced with '\n' (two characters: backslash, 'n').
+443 This replacement can be performed while you type the command:
+444 :%s/<c-r>=substitute(@a,"\n",'\\n','g')<CR>/bar/g
+445 The "\n" (double quotes) represents the single character newline; the '\\n' (single quotes) represents two backslashes 
+446 followed by 'n'. The substitute() function is evaluated by the <c-r>= (Ctrl-R =) expression register; it replaces each 
+447 newline with a single backslash followed by 'n'.
+448 The <CR> indicates that you press Enter to finish the = expression.
+449 :%s/<c-r>0/bar/g
+450 Same as above, using register 0 which contains the text from the most recent yank command.
+451 
+452 .Additional Examples
+453 :%s/foo/bar/
+454 On each line, replace the first occurrence of "foo" with "bar".
+455 :%s/.*\zsfoo/bar/
+456 On each line, replace the last occurrence of "foo" with "bar".
+457 :%s/\<foo\>//g
+458 On each line, delete all occurrences of the whole word "foo".
+459 :%s/\<foo\>.*//
+460 On each line, delete the whole word "foo" and all following text (to end of line).
+461 :%s/\<foo\>.\{5}//
+462 On each line, delete the first occurrence of the whole word "foo" and the following five characters.
+463 :%s/\<foo\>\zs.*//
+464 On each line, delete all text following the whole word "foo" (to end of line).
+465 :%s/.*\<foo\>//
+466 On each line, delete the whole word "foo" and all preceding text (from beginning of line).
+467 :%s/.*\ze\<foo\>//
+468 On each line, delete all the text preceding the whole word "foo" (from beginning of line).
+469 :%s/.*\(\<foo\>\).*/\1/
+470 On each line, delete all the text preceding and following the whole word "foo".
+471 :%s/\<foo\(bar\)\@!/toto/g
+472 On each line, replace each occurrence of "foo" (which starts a word and is not followed by "bar") by "toto".
+473 :s/^\(\w\)/\u\1/
+474 If the first character at the beginning of the current line only is lowercase, switch it to uppercase using \u (see switching case of characters).
+475 :%s/\(.*\n\)\{5\}/&\r/
+476 Insert a blank line every 5 lines.
+477 The pattern searches for \(.*\n\) (any line including its line ending) repeated five times (\{5\}).
+478 The replacement is & (the text that was found), followed by \r (newline).
+479 :%s/\<foo\(\a*\)\>/\=len(add(list, submatch(1)))?submatch(0):submatch(0)/g
+480 Get a list of search results. (the list must exist)
+481 Sets the modified flag, because of the replacement, but the content is unchanged.
+482 Note: With a recent enough Vim (version 7.3.627 or higher), you can simplify this to:
+483 :%s/\<foo\(\a*\)\>/\=add(list, submatch(1))/gn
+484 This has the advantage, that the buffer won't be marked modified and no extra undo state is created.
+485 The expression in the replacement part is executed in the sandbox and not allowed to modify the buffer.
+486 
+487 vim search and append/modify
+488 ----------------------------
+489 .Input: 
+490 The quick brown fox jumps over the lazy dog!
+491 Vim String Substitution Command:
+492 :%s/^The quick brown\(.\{-}\)lazy dog!$/The old red\1leg-hold trap!/g
+493 The .\{-} will match "any number of characters before the "lazy dog!",
+494 non-greedily" (:help /\{) The \( and \) mark it as a captured group
+495 that will then be used in the substitution as \1 (the first captured group).
+496 Running this gives you:
+497 .Output: 
+498 The old red fox jumps over the leg-hold trap!
+499 
+500 .Input
+501   **ZQ** -exit, ignore changes
+502 Vim String Substitution Command:
+503 :%s/^\s\+\*\*\(.\{-}\)\*\* \`\(.\{-}\)\`/printf \"${Command}   \1${Description} \2${NC}\\n\"/g
+504 Modified String after running the Vim substitution:
+505 .Output
+506 printf "${Command}   ZQ${Description} -exit, ignore changes${NC}\n"
+507 HOW IT WORKS:
+508 : ................... command will follow
+509 % ................... matches all lines in the whole file
+510 s/ .................. substitution string
+511 ^ ................... the beginning of the line
+512 \s .................. one space, the first in this case
+513 \+ .................. any number of the preceding character
+514 \*\* ................ literally match **
+515 \( expresion \) ..... save whatever matches the inner expression to the register \1
+516 .\{-} ............... match any number of any kind of character
+517 \*\* \` ............. literally match ** `
+518 \( expresion \) ..... save whatever matches the inner expression to the register \2
+519 \` .................. literally match `
+520 /replacement string/  Substitute every string that matches the above criteria with everything that is between the //
+521 like this: .......... /printf \"${Command}   \1${Description} \2${NC}\\n\"/
+522 g ................... last but not least g is the global flag, each occurrence in the line is changed,
+523                      rather than just the first
+524 
+525 
+526 .Recording a macro
+527 Each register is identified by a letter a to z.
+528 To enter a macro, type:
+529 q<letter><commands>q
+530 To execute the macro <number> times (once by default), type:
+531 <number>@<letter>
+532 So, the complete process looks like:
+533 qd - start recording to register d
+534 ... - your complex series of commands
+535 q - stop recording
+536 @d - execute your macro
+537 @@ - execute your macro again
